@@ -1,0 +1,15 @@
+{
+  "project": "role-based-access-control",
+  "domain": "rbac-demo.surge.sh",
+  "build": {
+    "publish": "public",
+    "ignore": [
+      "node_modules/**",
+      "server.js",
+      "package.json",
+      "package-lock.json",
+      "README.md",
+      "surge.json"
+    ]
+  }
+}

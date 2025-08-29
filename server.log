@@ -1,0 +1,17 @@
+Server running at http://localhost:3000
+[0mGET / [32m200[0m 7.008 ms - 600[0m
+[0mGET /favicon.ico [33m404[0m 1.735 ms - 150[0m
+[0mGET / [32m200[0m 1.062 ms - 600[0m
+[0mGET / [36m304[0m 1.296 ms - -[0m
+[0mGET /login.html [32m200[0m 2.297 ms - 875[0m
+[0mPOST /login [36m302[0m 109.179 ms - 44[0m
+[0mGET /protected.html [32m200[0m 0.910 ms - 445[0m
+[0mGET /index.html [32m200[0m 2.358 ms - 600[0m
+[0mGET /login.html [36m304[0m 2.026 ms - -[0m
+[0mGET /index.html [36m304[0m 1.622 ms - -[0m
+[0mGET /register.html [32m200[0m 2.854 ms - 1122[0m
+[0mPOST /register [36m302[0m 99.215 ms - 53[0m
+[0mGET /login.html?registered=1 [32m200[0m 0.754 ms - 875[0m
+[0mPOST /login [36m302[0m 98.996 ms - 44[0m
+[0mGET /protected.html [32m200[0m 0.524 ms - 443[0m
+[0mGET / [32m200[0m 11.996 ms - 2345[0m

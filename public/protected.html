@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protected Area - RBAC Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        body { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .protected-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="card protected-card p-4">
+                    <div class="text-center mb-4">
+                        <h1 class="display-5 text-success mb-3">
+                            <i class="bi bi-shield-check"></i> Protected Area
+                        </h1>
+                        <div id="userInfo">
+                            <!-- User info will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="d-grid gap-3">
+                        <button type="button" class="btn btn-danger btn-lg" data-action="logout">
+                            <i class="bi bi-box-arrow-left me-2"></i>Logout
+                        </button>
+                        <a href="index.html" class="btn btn-outline-secondary">
+                            <i class="bi bi-house me-2"></i>Back to Home
+                        </a>
+                        <a href="admin.html" class="btn btn-outline-danger" data-role="admin" style="display: none;">
+                            <i class="bi bi-gear me-2"></i>Admin Panel
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="demo.js"></script>
+    <script>
+        // Check authentication on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            if (!window.rbacDemo.isAuthenticated()) {
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+</body>
+</html>
